@@ -1,0 +1,82 @@
+<div class="card-container row">
+  <div class="card-title">
+    <h1> Dados do abrigo: </h1>
+    <button class="btn btn-principal btn-sm btn-function" (click)="edit()"> <i class="fas fa-edit"></i></button>
+  </div>
+  <div class="card-content">
+    <form role="form">
+      <tabset>
+        <tab heading="Dados gerais">
+          <div class="row">
+            <div class="col-md-9">
+              <div class="form-group">
+                <label> Nome: </label>
+                <span class="form-control"> {{ model.nome }} </span>
+              </div>
+              <div class="form-group">
+                <label> E-mail: </label>
+                <span class="form-control"> {{ model.email }} </span>
+              </div>
+              <div class="form-group">
+                <label> Telefone: </label>
+                <span class="form-control"> {{ model.telefone }} </span>
+              </div>
+              <div class="form-group">
+                <label> Descrição: </label>
+                <p class="form-control"> {{ model.descricao }} </p>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <img class="foto-perfil" src="../../../../assets/dog-icon.png">
+            </div>
+          </div>
+        </tab>
+        <tab heading="Endereço">
+          <div class="form-group">
+            <label> Logradouro: </label>
+            <span class="form-control"> {{ model.endereco.logradouro }} </span>
+          </div>
+          <div class="form-group">
+            <label> Número: </label>
+            <span class="form-control"> {{ model.endereco.numero }} </span>
+          </div>
+          <div class="form-group">
+            <label> País: </label>
+            <span class="form-control"> {{ model.endereco.pais }} </span>
+          </div>
+          <div class="form-group">
+            <label> Estado: </label>
+            <span class="form-control"> {{ model.endereco.uf }} </span>
+          </div>
+          <div class="form-group">
+            <label> Cidade: </label>
+            <span class="form-control"> {{ model.endereco.cidade }} </span>
+          </div>
+          <div class="form-group">
+            <label> Bairro: </label>
+            <span class="form-control"> {{ model.endereco.bairro }} </span>
+          </div>
+          <div class="form-group">
+            <label> Complemento: </label>
+            <span class="form-control"> {{ model.endereco.complemento }} </span>
+          </div>
+        </tab>
+        <tab heading="Responsável">
+          <div class="form-group">
+            <label> Nome: </label>
+            <span class="form-control"> {{ model.responsavel.nome }} </span>
+          </div>
+          <div class="form-group">
+            <label> E-mail: </label>
+            <span class="form-control"> {{ model.responsavel.email }} </span>
+          </div>
+          <div class="form-group">
+            <label> Telefone: </label>
+            <span class="form-control"> {{ model.responsavel.telefone }} </span>
+          </div>
+        </tab>
+      </tabset>
+		</form>
+  </div>
+</div>

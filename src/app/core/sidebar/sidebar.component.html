@@ -1,0 +1,92 @@
+<nav class="sidebar">
+    <a class="navbar-brand title" href="/dash">
+      <h1 class="logomarca"> AdotaPet </h1>
+      <img class="header-logo" alt="">
+    </a>
+    <div class="list-group">
+
+     <!-- Planos -->
+     <a routerLink="/dash" [routerLinkActive]="['router-link-active']" class="list-group-item">
+        <i class="fas fa-home"></i>&nbsp; Início
+    </a>
+
+    <div class="menu-accordion" role="tablist" aria-multiselectable="false">
+      <div class="base-menu">
+        <a class="no-color collapsed" data-toggle="collapse" data-parent="#accordion" href="#pets" aria-expanded="true">
+          <div class="card-header-submenu" role="tab">
+            <a class="list-group-item">
+              <i class="fas fa-paw"></i>&nbsp; Pets
+              <i class="pull-right caret-arrow fas fa-caret-down"></i>
+            </a>
+          </div>
+        </a>
+        <div id="pets" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+          <div class="menu-accordion" role="tablist" aria-multiselectable="false">
+            <div class="base-menu">
+              <a routerLink="/ocorrencias/auditoriaocorrencias/list" [routerLinkActive]="['router-link-active']" class="list-group-item submenu-item">
+                <span> Adicionar </span>
+              </a>
+              <!-- collapse button -->
+              <a routerLink="/medicos/listar" [routerLinkActive]="['router-link-active']" class="list-group-item submenu-item">
+                <span> Listar </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-accordion" role="tablist" aria-multiselectable="false">
+      <div class="base-menu">
+        <a class="no-color collapsed" data-toggle="collapse" data-parent="#accordion" href="#doacoes" aria-expanded="true">
+          <div class="card-header-submenu" role="tab">
+            <a class="list-group-item">
+              <i class="fas fa-bone"></i>&nbsp; Doações
+              <i class="pull-right caret-arrow fas fa-caret-down"></i>
+            </a>
+          </div>
+        </a>
+        <div id="doacoes" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+          <div class="menu-accordion" role="tablist" aria-multiselectable="false">
+            <div class="base-menu">
+              <a routerLink="/ocorrencias/auditoriaocorrencias/list" [routerLinkActive]="['router-link-active']" class="list-group-item submenu-item">
+                <span> Adicionar </span>
+              </a>
+              <!-- collapse button -->
+              <a routerLink="/medicos/listar" [routerLinkActive]="['router-link-active']" class="list-group-item submenu-item">
+                <span> Listar </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-accordion" role="tablist" aria-multiselectable="false">
+      <div class="base-menu">
+        <a class="no-color collapsed" data-toggle="collapse" data-parent="#accordion" href="#patrocinadores" aria-expanded="true">
+          <div class="card-header-submenu" role="tab">
+            <a class="list-group-item">
+              <i class="fas fa-money-bill"></i>&nbsp; Patrocinadores
+              <i class="pull-right caret-arrow fas fa-caret-down"></i>
+            </a>
+          </div>
+        </a>
+        <div id="patrocinadores" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+          <div class="menu-accordion" role="tablist" aria-multiselectable="false">
+            <div class="base-menu">
+              <a routerLink="/ocorrencias/auditoriaocorrencias/list" [routerLinkActive]="['router-link-active']" class="list-group-item submenu-item">
+                <span> Adicionar </span>
+              </a>
+              <!-- collapse button -->
+              <a routerLink="/medicos/listar" [routerLinkActive]="['router-link-active']" class="list-group-item submenu-item">
+                <span> Listar </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>

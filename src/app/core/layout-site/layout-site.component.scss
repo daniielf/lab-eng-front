@@ -1,0 +1,31 @@
+.sidebar-top {
+	width: 100%;
+	height: 70px;
+	background-color: #00A7D5;
+	padding: 20px;
+	color: white;
+}
+
+.background-none {
+	// background-color: rgba($color: #000, $alpha: 0.3) !important;
+	background-color: rgba(0,0,0,0.3);
+}
+
+.imagem-principal {
+	background-image: url("../../../assets/imagem-principal.jpeg");
+	height: 100%;
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	filter: grayscale(0.4);
+	filter: brightness(0.5);
+	z-index: -1;
+	position: absolute;
+	width: 100%;
+}
+
+.logomarca {
+	font-size: 30px;
+	font-family: 'Baloo', cursive;
+}

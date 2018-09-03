@@ -1,0 +1,23 @@
+.center {
+  padding-top: 5%;
+}
+
+.form-container {
+  background-color: #efefef;
+  display: flex;
+  flex-direction: column;
+  padding: 3%;
+}
+
+.form-container > * {
+  width: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.field-set {
+  background-color: #f9f7f7;
+}
+

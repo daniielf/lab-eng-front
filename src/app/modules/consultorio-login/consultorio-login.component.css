@@ -1,0 +1,12 @@
+.center {
+  padding-top: 15%;
+}
+
+.jumbotron {
+  display: flex;
+  flex-direction: column;
+}
+
+.jumbotron > * {
+  width: 100%;
+}

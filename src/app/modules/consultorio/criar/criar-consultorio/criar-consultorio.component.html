@@ -1,0 +1,80 @@
+<div class="container center">
+  <div class="row justify-content-md-center">
+    <div class="form-container col-md-8 ">
+      <h2>Cadastrar consultório</h2><br/>
+      <form action="">
+        <mat-form-field class="full-width">
+          <input matInput [(ngModel)]="consultorio.nome" name="nomeConsultorio" placeholder="Nome do consultório">
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <input matInput [(ngModel)]='consultorio.email' name="emailConsultorio" email="emailConsultorio" placeholder="Email">
+        </mat-form-field>
+        <mat-form-field class="full-width">
+            <input matInput placeholder="Senha" [type]="hide ? 'password' : 'text'">
+            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+        </mat-form-field>
+        <mat-form-field class="full-width">
+            <input matInput placeholder="Confirmar senha" [type]="hide ? 'password' : 'text'">
+            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+        </mat-form-field>
+
+        <br/><mat-divider></mat-divider><br/>
+        <table cellspacing="0" class="full-width">
+          <tr>
+            <td>
+              <mat-form-field class="full-width">
+                <mat-select placeholder="Estado">
+                  <mat-option *ngFor="let st of estado" [value]="estadoSelected">
+                    {{st.sigla}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field class="full-width">
+                <mat-select placeholder="Cidade">
+                  <mat-option *ngFor="let st of cidade" [value]="cidadeSelected">
+                    {{st.nome}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field class="full-width">
+                <input matInput [(ngModel)]='consultorio.endereco.CEP' name="CEP" placeholder="CEP">
+              </mat-form-field>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <mat-form-field class="full-width">
+                <input matInput [(ngModel)]='consultorio.endereco.rua' name="rua" placeholder="Rua/Avenida">
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field class="full-width">
+                <input matInput [(ngModel)]='consultorio.endereco.bairro' name="bairro" placeholder="Bairro">
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field class="full-width">
+                <input matInput [(ngModel)]='consultorio.endereco.numero' name="numero" placeholder="N°">
+              </mat-form-field>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3">
+              <mat-form-field class="full-width">
+                <input matInput [(ngModel)]='consultorio.endereco.complemento' name="complemento" placeholder="Complemento">
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+        <mat-form-field class="full-width">
+          <textarea matInput [(ngModel)]='consultorio.descricao' name="complemento" placeholder="Descrição" maxlength="100"></textarea>
+        </mat-form-field>
+        <button mat-raised-button color="primary" class="full-width" (click)="cadastrar()">Cadastrar</button>
+      </form>
+    </div>
+  </div>
+</div>

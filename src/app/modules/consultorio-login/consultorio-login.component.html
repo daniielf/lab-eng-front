@@ -1,0 +1,28 @@
+<div class="container center">
+  <div class="row justify-content-md-center">
+    <div class="jumbotron col-md-4">
+      <!--form class="login-consultorio-form"-->
+        <mat-form-field>
+            <input matInput placeholder="Email">
+          </mat-form-field>
+
+          <mat-form-field>
+              <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+              <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+        </mat-form-field>
+      <br/>
+        <button mat-raised-button color="primary">Logar</button>
+        <button mat-button color="primary"
+        (click)="registrar()"
+
+        >Registrar</button>
+      <!--/form-->
+    </div>
+  </div>
+</div>
+
+<p>
+    <ngb-alert [dismissible]="false">
+      <strong>Warning!</strong> Sample alert.
+    </ngb-alert>
+  </p>

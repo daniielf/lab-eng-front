@@ -1,0 +1,71 @@
+<div class="sidebar-top" routerLink="/inicio" [routerLinkActive]="['background-none']">
+  <div class="row">
+    <div class="col-md-6">
+      <h1 class="logomarca"> AdotaPet</h1>
+    </div>
+
+    <div class="col-md-6">
+			<div class="menu-items">
+				<a class="link-item">  Depoimentos </a>
+				<a class="link-item"> Como funciona </a>
+				<a class="link-item"> Sobre nós </a>
+				<a class="link-item" (click)="openLogInModal(modalLogar)"> Entrar </a>
+				<a class="link-item" (click)="openRegisterModal(modalCadastrar)"> Registrar </a>
+			</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- modal cadastrar -->
+<ng-template #modalCadastrar>
+	<div class="modal-header title-modal">
+		<h4 class="modal-title pull-left">Cadastre-se</h4>
+		<button type="button" class="close pull-right" aria-label="Close" (click)="modalCadastro.hide()">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	<div class="modal-body">
+		<form role="form">
+			<div class="form-group">
+				<label> <i class="fas fa-male"></i> Nome: </label>
+				<input [(ngModel)]="nomeInput" [ngModelOptions]="{standalone: true}" type="text" class="form-control" placeholder="Nome">
+			</div>
+			<div class="form-group">
+				<label> <i class="fas fa-envelope"></i> E-mail: </label>
+				<input [(ngModel)]="emailInput" [ngModelOptions]="{standalone: true}" type="email" class="form-control" placeholder="E-mail">
+			</div>
+			<div class="form-group">
+				<label> <i class="fas fa-user"></i> Usuário: </label>
+				<input [(ngModel)]="usuarioInput" [ngModelOptions]="{standalone: true}" type="text" class="form-control" placeholder="Usuário">
+			</div>
+			<div class="form-group">
+				<label> <i class="fas fa-key"></i> Senha: </label>
+				<input [(ngModel)]="senhaInput" [ngModelOptions]="{standalone: true}" type="password" class="form-control" placeholder="Senha">
+			</div>
+			<span role="button" (click)="register()" class="btn btn-principal pull-right">Cadastrar</span>
+		</form>
+	</div>
+
+</ng-template>
+<ng-template #modalLogar>
+	<div class="modal-header title-modal">
+		<h4 class="modal-title pull-left">Logar-se</h4>
+		<button type="button" class="close pull-right" aria-label="Close" (click)="modalLogin.hide()">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	<div class="modal-body">
+		<form role="form">
+			<div class="form-group">
+				<label> <i class="fas fa-user"></i> Usuário: </label>
+				<input [(ngModel)]="usernameInput" [ngModelOptions]="{standalone: true}" type="text" class="form-control" placeholder="Usuário">
+			</div>
+			<div class="form-group">
+				<label> <i class="fas fa-key"></i> Senha: </label>
+				<input [(ngModel)]="passwordInput" [ngModelOptions]="{standalone: true}" type="password" class="form-control" placeholder="Senha">
+			</div>
+			<span role="button" (click)="logIn()" class="btn btn-principal pull-right">Logar</span>
+		</form>
+	</div>
+</ng-template>

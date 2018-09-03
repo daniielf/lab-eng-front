@@ -1,0 +1,84 @@
+<div class="card-container row">
+    <div class="card-title">
+      <h1> Editar abrigo: </h1>
+      <button class="btn btn-success btn-sm btn-function" (click)="save()"> <i class="fas fa-save"></i></button>
+    </div>
+    <div class="card-content">
+      <form role="form">
+        <tabset>
+          <tab heading="Dados gerais">
+            <div class="row">
+              <div class="col-md-9">
+                <div class="form-group">
+                  <label> Nome: </label>
+                  <input [(ngModel)]="abrigo.nome" [ngModelOptions]="{standalone: true}" type="text" class="form-control" placeholder="Nome">
+                </div>
+                <div class="form-group">
+                  <label> E-mail: </label>
+                  <input [(ngModel)]="abrigo.email" [ngModelOptions]="{standalone: true}" type="email" class="form-control" placeholder="E-mail">
+                </div>
+                <div class="form-group">
+                  <label> Telefone: </label>
+                  <input [(ngModel)]="abrigo.telefone" [ngModelOptions]="{standalone: true}" type="text" class="form-control" placeholder="Telefone">
+                </div>
+                <div class="form-group">
+                  <label> Descrição: </label>
+                  <textarea [(ngModel)]="abrigo.descricao" [ngModelOptions]="{standalone: true}"  placeholder="Descrição do abrigo" class="form-control" rows="2"></textarea>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <img class="foto-perfil" src="../../../../assets/dog-icon.png">
+                <label for="alterarFoto" class="btn btn-principal btn-alterar-foto"> Alterar foto</label>
+                <!-- <input type="file" id="alterarFoto"/> -->
+              </div>
+            </div>
+          </tab>
+          <tab heading="Endereço">
+            <div class="form-group">
+              <label> Logradouro: </label>
+              <input [(ngModel)]="abrigo.endereco.logradouro" [ngModelOptions]="{standalone: true}" type="text" class="form-control" placeholder="Logradouro">
+            </div>
+            <div class="form-group">
+              <label> Número: </label>
+              <input [(ngModel)]="abrigo.endereco.numero" [ngModelOptions]="{standalone: true}" type="text" class="form-control" placeholder="Número">
+            </div>
+            <div class="form-group">
+              <label> País: </label>
+              <ng-select [(ngModel)]="abrigo.endereco.pais" [ngModelOptions]="{standalone: true}" [items]="paises" bindLabel="nome_pais" bindValue="nome_pais" placeholder="País"></ng-select>
+            </div>
+            <div class="form-group" *ngIf="abrigo.endereco.pais === 'Brasil'">
+              <label> Estado: </label>
+              <ng-select [(ngModel)]="abrigo.endereco.uf" [ngModelOptions]="{standalone: true}" [items]="estados" bindLabel="nome" bindValue="sigla" placeholder="Estado" (change)="updateCidades($event)"></ng-select>
+            </div>
+            <div class="form-group" *ngIf="abrigo.endereco.uf && abrigo.endereco.pais === 'Brasil'">
+              <label> Cidade: </label>
+              <ng-select [(ngModel)]="abrigo.endereco.cidade" [ngModelOptions]="{standalone: true}" [items]="cidades" placeholder="Cidade" ></ng-select>
+            </div>
+            <div class="form-group">
+              <label> Bairro: </label>
+              <input [(ngModel)]="abrigo.endereco.bairro" [ngModelOptions]="{standalone: true}" type="text" class="form-control" placeholder="Bairro">
+            </div>
+            <div class="form-group">
+              <label> Complemento: </label>
+              <input [(ngModel)]="abrigo.endereco.complemento" [ngModelOptions]="{standalone: true}" type="text" class="form-control" placeholder="Complemento">
+            </div>
+          </tab>
+          <tab heading="Responsável">
+            <div class="form-group">
+              <label> Nome: </label>
+              <input [(ngModel)]="abrigo.responsavel.nome" [ngModelOptions]="{standalone: true}" type="text" class="form-control" placeholder="Nome">
+            </div>
+            <div class="form-group">
+              <label> E-mail: </label>
+              <input [(ngModel)]="abrigo.responsavel.email" [ngModelOptions]="{standalone: true}" type="email" class="form-control" placeholder="E-mail">
+            </div>
+            <div class="form-group">
+              <label> Telefone: </label>
+              <input [(ngModel)]="abrigo.responsavel.telefone" [ngModelOptions]="{standalone: true}" type="text" class="form-control" placeholder="Telefone">
+            </div>
+          </tab>
+        </tabset>
+      </form>
+    </div>
+  </div>

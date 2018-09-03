@@ -1,0 +1,56 @@
+$cor-principal : #00A7D5;
+.sidebar-top {
+	height: 55px;
+	background-color: $cor-principal;
+	color: #fff;
+	text-align: right;
+}
+
+.img-rounded {
+	background-color: #fff;
+	border-radius: 50%;
+}
+
+.perfil-info {
+	width: 100%;
+}
+
+.title-name  {
+	display: inline-block;
+	font-size: 18px;
+	margin: 8px;
+}
+
+.perfil-img {
+	display: inline-block;
+	height: 45px;
+	width: auto;
+	border-radius: 50%;
+	margin: 5px;
+}
+
+.user-info {
+	display: none;
+	text-align: left;
+	width: 200px;
+	height: 75px;
+	float: right;
+	background-color: #0E6077;
+	color: #fff;
+	padding: 12px;
+	line-height: 1.7;
+	opacity: 0;
+	-moz-transition: opacity 3s, display .1s;
+	-o-transition: opacity 3s, display .1s;
+	transition: opacity 3s, display .1s;
+
+	z-index: 99999;
+	position: absolute;
+	right: 0;
+}
+
+.perfil-info:hover > .user-info {
+	opacity: 1;
+	display: block;
+	// background-color: #fff;
+}
